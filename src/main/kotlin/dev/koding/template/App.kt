@@ -2,6 +2,7 @@ package dev.koding.template
 
 import com.kotlindiscord.kord.extensions.ExtensibleBot
 import dev.koding.template.config.config
+import dev.koding.template.extension.TestExtension
 import dev.koding.template.util.Colors
 import dev.koding.template.util.feedback
 import mu.KotlinLogging
@@ -27,6 +28,11 @@ suspend fun main() {
             feedback(type.error.message ?: message) {
                 color = Colors.ERROR
             }
+        }
+
+        // This is where you can add your own extensions, see TestExtension for more info
+        extensions {
+            add(::TestExtension)
         }
     }
 
