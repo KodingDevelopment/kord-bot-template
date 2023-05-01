@@ -3,11 +3,11 @@ import org.jetbrains.gradle.ext.settings
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.6.10"
-    kotlin("plugin.serialization") version "1.6.10"
+    kotlin("jvm") version "1.8.20"
+    kotlin("plugin.serialization") version "1.8.20"
 
-    id("com.github.johnrengelman.shadow") version "7.1.2"
-    id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.6"
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("org.jetbrains.gradle.plugin.idea-ext") version "1.1.7"
 }
 
 group = "dev.koding"
@@ -27,17 +27,17 @@ dependencies {
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
 
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0-RC")
 
     // Kord
-    implementation("com.kotlindiscord.kord.extensions:kord-extensions:1.5.5-SNAPSHOT")
+    implementation("com.kotlindiscord.kord.extensions:kord-extensions:1.5.6-SNAPSHOT")
 
     // Logging
-    implementation("io.github.microutils:kotlin-logging:3.0.0")
-    implementation("org.apache.logging.log4j:log4j-api:2.19.0")
-    implementation("org.apache.logging.log4j:log4j-core:2.19.0")
-    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0")
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
+    implementation("org.apache.logging.log4j:log4j-api:2.20.0")
+    implementation("org.apache.logging.log4j:log4j-core:2.20.0")
+    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.20.0")
 }
 
 // Java build
